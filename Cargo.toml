@@ -1,0 +1,20 @@
+[package]
+name = "solana-escrow"
+version = "0.1.0"
+edition = "2021"
+license = "WTFPL"
+publish = false
+
+[features]
+# Using solely Custom Entrypoint
+no-entrypoint = []
+
+[dependencies]
+solana-program = "=1.9.1"
+thiserror = "1.0.30"
+# Excluding Entrypoint cause Program should have only one Entrypoint
+spl-token = {version = "3.2.0", features = ["no-entrypoint"]}
+arrayref = "0.3.6"
+
+[lib]
+crate-type = ["cdylib", "lib"]

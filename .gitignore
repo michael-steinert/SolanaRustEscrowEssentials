@@ -1,0 +1,6 @@
+.idea
+/target/
+Cargo.lock
+scripts/node_modules
+scripts/build
+scripts/package-lock.json
